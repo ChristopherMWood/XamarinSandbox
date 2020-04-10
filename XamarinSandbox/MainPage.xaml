@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="XamarinSandbox.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="BackgroundColor" Value="MediumSpringGreen"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <ImageButton Source="settings_cog" Style="{StaticResource SettingsButton}" Clicked="OnSettingsClicked" HorizontalOptions="End" VerticalOptions="Start" />
+        <Button Clicked="AnimationsButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" Text="Basketball Animation" />
+        <Button Clicked="LottieButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" Text="Lottie Animations" />
+    </StackLayout>
+</ContentPage>

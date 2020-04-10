@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSandbox.SimpleAnimations">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="HeightRequest" Value="50"/>
+            </Style>
+            <Style TargetType="Image" x:Key="Basketball">
+                <Setter Property="WidthRequest" Value="75"/>
+                <Setter Property="HeightRequest" Value="75"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="Image" x:Key="Dino">
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="200"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Image x:Name="basketball_image" Style="{StaticResource Basketball}" Source="basketball"/>
+        <Image x:Name="dino" Style="{StaticResource Dino}" Source="dino"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="One" Clicked="OnStartAnimationOne" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Button Text="Two" Clicked="OnStartAnimationTwo" HorizontalOptions="Center" VerticalOptions="End"/>
+            <Button Text="Three" Clicked="OnStartAnimationThree" HorizontalOptions="Center" VerticalOptions="End"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
