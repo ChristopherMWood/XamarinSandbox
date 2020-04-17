@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSandbox.Buttons">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="BackgroundColor" Value="MediumSpringGreen"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical" Padding="0, 100, 0, 0">
+        <Button Clicked="ButtonOneClick" HorizontalOptions="Center" VerticalOptions="Center" Text="Full Scale" />
+        <Button Clicked="ButtonTwoClick" HorizontalOptions="Center" VerticalOptions="Center" Text="Horizontal Scale" />
+        <Button Clicked="ButtonThreeClick" HorizontalOptions="Center" VerticalOptions="Center" Text="Vertical Rotation" />
+        <Button Clicked="ButtonFourClick" HorizontalOptions="Center" VerticalOptions="Center" Text="Fade" />
+        <Button Clicked="ButtonFiveClick" HorizontalOptions="Center" VerticalOptions="Center" Text="Spin" />
+        <Button Clicked="ButtonSixClick" Pressed="OnButtonSixPress" Unfocused="ButtonSixClick" HorizontalOptions="Center" VerticalOptions="Center" Text="Press Event Button" />
+    </StackLayout>
+</ContentPage>

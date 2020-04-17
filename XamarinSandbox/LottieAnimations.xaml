@@ -1,5 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinSandbox.LottieAnimations">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="XamarinSandbox.LottieAnimations">
+    <CarouselView ItemsSource="{Binding LottieSlides}">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Title}" HorizontalOptions="Center" VerticalTextAlignment="End" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="28" Padding="30, 0, 30, 0"></Label>
+                    <forms:AnimationView HeightRequest="500" x:Name="AnimationView"
+                         Animation="{Binding AnimationFilename}"
+                         Loop="True"
+                         AutoPlay="True"
+                         VerticalOptions="Center"
+                         HorizontalOptions="FillAndExpand" />
+                    <Label Text="{Binding Info}" HorizontalOptions="Center" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="18" Padding="30, 0, 30, 0"></Label>
+                </StackLayout>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 </ContentPage>

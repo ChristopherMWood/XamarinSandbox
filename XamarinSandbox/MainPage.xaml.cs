@@ -18,14 +18,24 @@ namespace XamarinSandbox
         {
         }
 
-        public void AnimationsButtonClicked(object sender, EventArgs e)
+        public async void AnimationsButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new SimpleAnimations());
+            await Navigation.PushAsync(new SimpleAnimations());
         }
 
-        public void LottieButtonClicked(object sender, EventArgs e)
+        public async void LottieButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LottieAnimations());
+            await Navigation.PushAsync(new LottieAnimations());
+        }
+
+        public async void ButtonsButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Buttons());
+        }
+
+        public async void ComplexAnimationButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ComplexAnimation());
         }
     }
 }

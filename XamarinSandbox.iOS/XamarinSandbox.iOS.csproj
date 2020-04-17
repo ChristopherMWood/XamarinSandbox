@@ -118,6 +118,17 @@
     <ImageAsset Include="Assets.xcassets\basketball.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\basketball.imageset\basketball.png" />
     <ImageAsset Include="Assets.xcassets\dino.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\notification_bell.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\notification_bell.imageset\notification_bell.png" />
+    <ImageAsset Include="Assets.xcassets\cartman_happy.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cartman_angry.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cartman_pointing.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cartman_pointing.imageset\cartman_pointing.png" />
+    <ImageAsset Include="Assets.xcassets\cartman_angry.imageset\cartman_angry.png" />
+    <ImageAsset Include="Assets.xcassets\cartman_happy.imageset\cartman_happy.png" />
+    <ImageAsset Include="Assets.xcassets\dino.imageset\dino.png" />
+    <ImageAsset Include="Assets.xcassets\aircraft.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\aircraft.imageset\aircraft.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -130,6 +141,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Com.Airbnb.iOS.Lottie">
+      <Version>2.5.10</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -142,5 +156,19 @@
     <Folder Include="Assets.xcassets\settings_cog.imageset\" />
     <Folder Include="Assets.xcassets\basketball.imageset\" />
     <Folder Include="Assets.xcassets\dino.imageset\" />
+    <Folder Include="Assets.xcassets\notification_bell.imageset\" />
+    <Folder Include="Assets.xcassets\cartman_happy.imageset\" />
+    <Folder Include="Assets.xcassets\cartman_angry.imageset\" />
+    <Folder Include="Assets.xcassets\cartman_pointing.imageset\" />
+    <Folder Include="Assets.xcassets\aircraft.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hand_sanitizer.json" />
+    <BundleResource Include="Resources\thumbs_up.json" />
+    <BundleResource Include="Resources\wash_hands.json" />
+    <BundleResource Include="Resources\covid_19.json" />
+    <BundleResource Include="Resources\wear_mask.json" />
+    <BundleResource Include="Resources\stay_home.json" />
+    <BundleResource Include="Resources\explosion.json" />
   </ItemGroup>
 </Project>

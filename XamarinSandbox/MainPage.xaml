@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="XamarinSandbox.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:behaviors="clr-namespace:XamarinSandbox.Behaviors"
+             mc:Ignorable="d" x:Class="XamarinSandbox.MainPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -11,8 +16,31 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <ImageButton Source="settings_cog" Style="{StaticResource SettingsButton}" Clicked="OnSettingsClicked" HorizontalOptions="End" VerticalOptions="Start" />
+        <StackLayout Orientation="Horizontal">
+
+            <Image Source="notification_bell" Style="{StaticResource SettingsButton}" HorizontalOptions="End" VerticalOptions="Start">
+                <Image.Behaviors>
+                    <behaviors:BellShakeBehavior/>
+                </Image.Behaviors>
+            </Image>
+
+            <ImageButton Source="settings_cog" Style="{StaticResource SettingsButton}" Clicked="OnSettingsClicked" HorizontalOptions="End" VerticalOptions="Start">
+                <ImageButton.Behaviors>
+                    <behaviors:RotationBehavior/>
+                </ImageButton.Behaviors>
+            </ImageButton>
+
+        </StackLayout>
+
+        <Image Source="cartman_happy" WidthRequest="150" HeightRequest="150" HorizontalOptions="Center" VerticalOptions="Start">
+            <Image.Behaviors>
+                <behaviors:CartmanBehavior/>
+            </Image.Behaviors>
+        </Image>
+
         <Button Clicked="AnimationsButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" Text="Basketball Animation" />
         <Button Clicked="LottieButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" Text="Lottie Animations" />
+        <Button Clicked="ButtonsButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" Text="Button Animations" />
+        <Button Clicked="ComplexAnimationButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" Text="Complex Animation" />
     </StackLayout>
 </ContentPage>
